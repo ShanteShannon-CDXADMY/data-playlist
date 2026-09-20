@@ -1,7 +1,7 @@
 let button = document.getElementById("song-button");
 let nextButton = document.getElementById("next-button");
 let backButton = document.getElementById("back-button");
-
+let topButton =document.getElementById("top-button");
 let songs = [];
 let index =0;
 
@@ -30,15 +30,28 @@ button.addEventListener("click", function () {
 
 nextButton.addEventListener("click", function () {
   index = index + 1;
+
+  if (index > songs.length - 1) {
+    index = 0;
+  }
+
   showSong();
 });
 
 backButton.addEventListener("click", function () {
-  if (index > 0) {
-    index = index - 1;
-    showSong();
+  index = index - 1;
+
+  if (index < 0) {
+    index = songs.length - 1;
   }
+
+  showSong();
 });
 
+
+topButton.addEventListener("click", function () {
+  index = 0;
+  showSong();
+});
 
 
