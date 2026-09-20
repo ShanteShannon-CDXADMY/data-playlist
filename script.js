@@ -2,8 +2,11 @@ let button = document.getElementById("song-button");
 let nextButton = document.getElementById("next-button");
 let backButton = document.getElementById("back-button");
 let topButton =document.getElementById("top-button");
+let saveButton = document.getElementById("save-button");
 let songs = [];
 let index =0;
+let favorites = [];
+
 
 
 async function loadSongs() {
@@ -21,6 +24,15 @@ function showSong() {
   document.getElementById("track-name").textContent = song["Track Name"];
   document.getElementById("track-facts").textContent = "#" + song.Position + " — " + song.Artist;
   document.getElementById("track-count").textContent = (index + 1) + " of " + songs.length;
+}
+function renderFavorites() {
+  let text = "";
+
+  favorites.forEach(function (favorite) {
+    text = text + "• " + favorite + " ";
+  });
+
+  document.getElementById("favorites-list").textContent = text;
 }
 
 
@@ -49,9 +61,19 @@ backButton.addEventListener("click", function () {
 });
 
 
+
 topButton.addEventListener("click", function () {
   index = 0;
   showSong();
+});
+
+saveButton.addEventListener("click", function () {
+  let song = songs[index];
+
+  if (favorites.length < 5) {
+    favorites.push(song["Track Name"] + " — " + song.Artist);
+    renderFavorites();
+  }
 });
 
 
