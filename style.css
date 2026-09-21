@@ -1,0 +1,103 @@
+/* Center the phone on the page */
+body {
+  background: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Phone container */
+.phone {
+  width: 360px;
+  height: 650px;
+  background: #1a1a1a;
+  border-radius: 40px;
+  border: 6px solid grey;
+  box-shadow: 0 0 40px rgba(0,0,0,0.7);
+  overflow: hidden;
+  display: block;
+  margin: auto;
+}
+
+/* Top bar (like a phone status bar) */
+.phone-top {
+  height: 60px;
+  background: #000;
+  border-bottom: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Playlist content area */
+.phone-content {
+  padding: 20px;
+  overflow-y: auto;
+  height:600px;
+  background-color:white;
+}
+
+/* Track display */
+#track-name {
+	color: black;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+
+}
+
+#track-facts {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 5px;
+  background: #00aaff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0088cc;
+}
+
+/* Favorites list */
+#favorites-list {
+  margin-top: 20px;
+  padding: 10px;
+  border:1px dotted black;
+  border-radius: 12px;
+  min-height:150px;
+}
+.screen1{
+border:1px solid black;}
+
+.callToAction {
+	display:flex;
+	gap:15px;
+}
+
+h1, h2 {
+	text-align:center;
+	text-decoration:underline;
+	font-size:30px;
+}
+.screen2 {
+border:1px solid black;}
+
+h3 {
+font-size:5px;}

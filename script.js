@@ -29,7 +29,7 @@ function renderFavorites() {
   let text = "";
 
   favorites.forEach(function (favorite) {
-    text = text + "• " + favorite + " ";
+    text = text + "• " + favorite + " " ;
   });
 
   document.getElementById("favorites-list").textContent = text;
@@ -60,6 +60,12 @@ backButton.addEventListener("click", function () {
   showSong();
 });
 
+
+clearButton.addEventListener("click", function () {
+  favorites = [];
+  renderFavorites();
+  document.getElementById("save-message").textContent = "";
+});
 
 
 topButton.addEventListener("click", function () {

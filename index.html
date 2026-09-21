@@ -5,26 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Playlist</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.classless.min.css">
+	<link rel="stylesheet" href = "style.css">
   </head>
   <body>
     <main>
-      <h1>My Playlist</h1>
-      <p>Songs from a chart, served by an API I deployed myself.</p>
-	  <button id="song-button" type="button">Load the chart</button>
+	<div class="phone">
+	 <div class="phone-top">Top 5 Builder</div>
+	 <div class ="phone-content">
+	 <article class="screen1">
+	 
+      <h1>Viral 50 Top 5 Playlist</h1>
+      <p>Search through the top 50 viral songs and artist, served by an API, to create your top 5 playlist.</p>
+	 	 </article>
+		 <button id="song-button" type="button">Load the chart</button>
+	  <article>
+	  <h3 id="track-name">Press the load button</h3>
+	  <p id="track-facts"></p>
+	  <p id="track-count"></p> 
+	  </article>
+	  <div class="callToAction">
 	  <button id="back-button" type="button">Back</button>
 	  <button id="next-button" type="button">Next</button>
+	  </div>
 	  <button id="top-button" type="button">Back to Top</button>
-      <button id="save-button" type="button">Save to my Top 5</button>
-	  <h2>My Top 5</h2>
+     <button id="save-button" type="button">Save to my Top 5</button>
+	  <article class="screen2">
+	  <h2>My Top 5 Playlist</h2>
 	  <p id="favorites-list"></p>
+	  </article>
+	  <button id="clearButton" type="button">CLEAR</button>
 
-	<article>
-	  <h2 id="track-name">Press the button</h2>
-	  <p id="track-facts"></p>
-	  <p id="track-count"></p>
-
-	</article>
-
+</div>
+	</div>
 	</main>
     <script src="script.js"></script>
   </body>
